@@ -6,15 +6,11 @@ Imports System.Data.OleDb
 Public Class SQLQuery
 
     'Shared alternativeConnection As String = "Data Source=ASUS-FX553;Initial Catalog=MegaData_TEST;Integrated Security=True;Persist Security Info=True"
-    Private Shared ReadOnly connectionString As String = "Provider=SQLOLEDB;Data Source=YAZILIM4\MEGA;Initial Catalog=MegaData_TEST;Integrated Security=SSPI;Persist Security Info=True;User ID=sa"
-    Private Shared ReadOnly oleConnection As New OleDbConnection(connectionString)
-    Private commandString As String = String.Empty
-    Private ReadOnly oleCommand As New OleDbCommand(commandString, oleConnection)
-    Private ReadOnly oleDataAdapter As New OleDbDataAdapter(oleCommand)
-
-    Public Sub New(commandString As String)
-        Me.commandString = commandString
-    End Sub
+    Dim connectionString As String = "Provider=SQLOLEDB;Data Source=YAZILIM4\MEGA;Initial Catalog=MegaData_TEST;Integrated Security=SSPI;Persist Security Info=True;User ID=sa"
+    Dim oleConnection As New OleDbConnection(connectionString)
+    Dim commandString As String = "SELECT * FROM CarAna"
+    Dim oleCommand As New OleDbCommand(commandString, oleConnection)
+    Dim oleDataAdapter As New OleDbDataAdapter(oleCommand)
 
     Public Function cmdDataTable(dataTable As DataTable) As DataTable
 
@@ -68,7 +64,7 @@ Public Class DemoWebService
     <WebMethod()>
     Public Function CariListesi() As DataTable
         Dim cariDT As New DataTable("CarAna")
-        Dim sqlQuery As New SQLQuery("SELECT * FROM CarAna")
+        Dim sqlQuery As New SQLQuery
         sqlQuery.cmdDataTable(cariDT)
         Return cariDT
     End Function
@@ -76,7 +72,7 @@ Public Class DemoWebService
     <WebMethod()>
     Public Function CariHareketListesi() As DataTable
         Dim cariHareketDT As New DataTable("CarHarDet")
-        Dim sqlQuery As New SQLQuery("SELECT * FROM CarHarDet")
+        Dim sqlQuery As New SQLQuery
         sqlQuery.cmdDataTable(cariHareketDT)
         Return cariHareketDT
     End Function

@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.28307.1401
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "web-service-project", "web-service-project\web-service-project.vbproj", "{B421F16D-3849-4F64-B5C8-22D43FE1B2AD}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "web-service-client-demo", "web-service-client-demo\web-service-client-demo.vbproj", "{12D12435-5915-4BCF-B6D4-C7F27C778EF1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B421F16D-3849-4F64-B5C8-22D43FE1B2AD} = {B421F16D-3849-4F64-B5C8-22D43FE1B2AD}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{B421F16D-3849-4F64-B5C8-22D43FE1B2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B421F16D-3849-4F64-B5C8-22D43FE1B2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B421F16D-3849-4F64-B5C8-22D43FE1B2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D12435-5915-4BCF-B6D4-C7F27C778EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D12435-5915-4BCF-B6D4-C7F27C778EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D12435-5915-4BCF-B6D4-C7F27C778EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D12435-5915-4BCF-B6D4-C7F27C778EF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
