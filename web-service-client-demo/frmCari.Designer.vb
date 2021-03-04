@@ -24,6 +24,7 @@ Partial Class frmCari
     Private Sub InitializeComponent()
         Me.dgvCari = New System.Windows.Forms.DataGridView()
         Me.btnGetir = New System.Windows.Forms.Button()
+        Me.btnKimlikSorgula = New System.Windows.Forms.Button()
         CType(Me.dgvCari, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,11 +45,21 @@ Partial Class frmCari
         Me.btnGetir.Text = "Getir"
         Me.btnGetir.UseVisualStyleBackColor = True
         '
+        'btnKimlikSorgula
+        '
+        Me.btnKimlikSorgula.Location = New System.Drawing.Point(12, 418)
+        Me.btnKimlikSorgula.Name = "btnKimlikSorgula"
+        Me.btnKimlikSorgula.Size = New System.Drawing.Size(75, 23)
+        Me.btnKimlikSorgula.TabIndex = 2
+        Me.btnKimlikSorgula.Text = "Sorgula"
+        Me.btnKimlikSorgula.UseVisualStyleBackColor = True
+        '
         'frmCari
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnKimlikSorgula)
         Me.Controls.Add(Me.btnGetir)
         Me.Controls.Add(Me.dgvCari)
         Me.Name = "frmCari"
@@ -60,4 +71,5 @@ Partial Class frmCari
 
     Friend WithEvents dgvCari As DataGridView
     Friend WithEvents btnGetir As Button
+    Friend WithEvents btnKimlikSorgula As Button
 End Class
